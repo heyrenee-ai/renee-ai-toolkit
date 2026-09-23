@@ -4,11 +4,9 @@
 
 输入：JSONL，一行一个账号，用 reference/browser-recipes.md 里的片段采集：
 
-    {"handle":"smart.easy","platform":"tiktok","face":"不露脸",
-     "form":"图文卡片","followers":"892.9K","pinned":3,
-     "items":"7663878944277499143:1.9M;7546704462451166472:554.1K"}   # id:播放
-    {"handle":"uncover.ai","platform":"instagram","followers":"787K",
-     "items":"260921:12200;260920:21600"}                            # yymmdd:播放
+    {"handle":"fictional_demo_01","platform":"tiktok","followers":"1200",
+     "synthetic":true,"items":"250131:0;250130:500;250129:900;250128:300;250127:700;250126:400"}
+    # 虚构格式示例；日期和数值为人工构造，不对应真实账号。
 
 `items` 两种写法都认。TikTok 的 id 和 Instagram 的 shortcode 都会被换算成发布日期，
 ID 日期为启发式推断，须与页面时间核对；输出窗口长度帮助发现不可比性。
