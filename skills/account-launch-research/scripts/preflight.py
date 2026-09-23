@@ -18,7 +18,7 @@ def has_module(name):
 
 def main():
     problems, notes = [], []
-    print("Creator Benchmark Kit · 环境自检\n")
+    print("Account Launch Research · 环境自检\n")
 
     # ── 必需 ──────────────────────────────────────────────
     print("必需")

@@ -19,7 +19,7 @@ def build():
                      r['n'], '/'.join(map(str, r['segment_n'])), show(r['median_views']),
                      show(r['recent']), show(r['oldest']), show(r['recent_over_oldest']),
                      r['window_days']])
-    return {'title': 'Creator Benchmark Kit — snapshot demo', 'lang': 'en',
+    return {'title': 'Account Launch Research — snapshot demo', 'lang': 'en',
             'eyebrow': 'Recomputable example · historical provider-supplied snapshot',
             'subtitle': 'These numbers describe the supplied input only. They do not establish current account performance, a niche trend, or a causal effect.',
             'facts': [['Accounts', len(stats)], ['Window', 'Up to 36 posts'], ['Evidence', 'Unverified capture provenance']],
