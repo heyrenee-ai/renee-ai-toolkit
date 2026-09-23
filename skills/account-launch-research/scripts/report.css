@@ -1,0 +1,170 @@
+/* Palette: a blue/slate system in the spirit of Radix's 12-step scales —
+   low steps for grounds, mid for lines, step 9 for the one solid accent, high for text. */
+:root{
+ --ground:#FBFCFE; --panel:#FFFFFF; --panel-2:#F4F7FB;
+ --ink:#0E1729; --ink-2:#3E4C63; --muted:#78879E;
+ --line:#E4EAF2; --line-2:#C9D4E3;
+ --accent:#1B64DA; --accent-2:#134BAE; --accent-soft:#EAF1FE; --accent-line:#BBD2FA;
+ --warn:#9A5B12; --warn-soft:#FDF3E4; --warn-line:#EFD7B4;
+ --ig:#B83280; --tt:#0E8E9B; --yt:#B84A3A;
+ --shadow:0 1px 2px rgba(14,23,41,.04), 0 8px 24px -12px rgba(14,23,41,.10);
+ color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --ground:#0A0F1A; --panel:#111827; --panel-2:#151E2E;
+ --ink:#E9EEF7; --ink-2:#B3C0D4; --muted:#7C8AA1;
+ --line:#1E2839; --line-2:#2F3D52;
+ --accent:#6BA4FF; --accent-2:#8FBCFF; --accent-soft:#12223C; --accent-line:#1E3A63;
+ --warn:#E0A75C; --warn-soft:#2A2114; --warn-line:#4A3A1F;
+ --ig:#E87BB8; --tt:#49BFC9; --yt:#E08376;
+ --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+ color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+ --ground:#0A0F1A; --panel:#111827; --panel-2:#151E2E;
+ --ink:#E9EEF7; --ink-2:#B3C0D4; --muted:#7C8AA1;
+ --line:#1E2839; --line-2:#2F3D52;
+ --accent:#6BA4FF; --accent-2:#8FBCFF; --accent-soft:#12223C; --accent-line:#1E3A63;
+ --warn:#E0A75C; --warn-soft:#2A2114; --warn-line:#4A3A1F;
+ --ig:#E87BB8; --tt:#49BFC9; --yt:#E08376;
+ --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.6);
+ color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+ font-family:Inter,"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+ font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+ font-feature-settings:"cv05","ss01"}
+.wrap{max-width:860px;margin:0 auto;padding-inline:22px;padding-block:0 96px}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent-2)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+/* ── hero ───────────────────────────────────────────── */
+header.hero{padding-block:76px 40px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+ font-weight:600;margin:0 0 18px}
+h1{font-family:"Instrument Serif","Noto Serif SC",Georgia,serif;font-weight:400;
+ font-size:clamp(40px,7vw,68px);line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.lede{font-size:18px;line-height:1.65;color:var(--ink-2);max-width:46ch;margin-top:20px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:32px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:8px 13px;
+ font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;box-shadow:var(--shadow)}
+.fact b{color:var(--ink);font-weight:600}
+
+/* ── nav ────────────────────────────────────────────── */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;
+ background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);
+ border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+ padding-block:11px;margin-bottom:8px;overflow-x:auto;scrollbar-width:none}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc ol{display:flex;gap:4px;list-style:none;margin:0;padding:0;white-space:nowrap}
+nav.toc a{display:inline-block;padding:5px 12px;font-size:12.5px;color:var(--muted);
+ text-decoration:none;border-radius:999px;font-weight:500}
+nav.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+
+/* ── section: label → headline → sub → chart → action → fine ── */
+section{padding-block:76px 64px;border-bottom:1px solid var(--line)}
+.kicker{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+ color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:14px}
+h2{font-size:13.5px;font-weight:600;letter-spacing:.02em;color:var(--muted);margin:0 0 10px}
+.headline{font-family:"Instrument Serif","Noto Serif SC",Georgia,serif;font-weight:400;
+ font-size:clamp(28px,4.4vw,44px);line-height:1.18;letter-spacing:-.012em;
+ color:var(--ink);margin:0 0 20px;max-width:26ch;text-wrap:balance}
+.headline b{font-weight:400;color:var(--accent);font-variant-numeric:tabular-nums}
+.sub{font-size:17px;line-height:1.7;color:var(--ink-2);max-width:52ch;margin:0 0 6px}
+.sub b{color:var(--ink);font-weight:600}
+p{margin:14px 0;max-width:62ch}
+h3{font-size:16px;font-weight:650;margin:34px 0 0;color:var(--ink);letter-spacing:.01em}
+
+/* appendix sections read as reference, not as findings */
+section.appendix{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+ padding:36px 30px;margin-top:56px;border-bottom:none;box-shadow:var(--shadow)}
+section.appendix h2{font-size:22px;font-weight:650;color:var(--ink);letter-spacing:-.01em}
+
+/* ── one page / takeaways ───────────────────────────── */
+ol.takeaways{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0}
+ol.takeaways li{display:flex;gap:18px;align-items:flex-start;padding:20px 0;
+ border-top:1px solid var(--line);margin:0}
+ol.takeaways li:last-child{border-bottom:1px solid var(--line)}
+ol.takeaways .num{flex:none;width:30px;font-size:12px;font-weight:700;color:var(--accent);
+ font-variant-numeric:tabular-nums;letter-spacing:.06em;padding-top:5px}
+ol.takeaways b{font-size:18px;line-height:1.5;font-weight:650;display:block;letter-spacing:-.005em}
+ol.takeaways p{margin:6px 0 0;font-size:14px;line-height:1.65;color:var(--muted);max-width:60ch}
+
+/* ── action + fine print ────────────────────────────── */
+.sowhat{background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:12px;
+ padding:18px 20px;margin:30px 0 0;font-size:16px;line-height:1.7;color:var(--ink);max-width:62ch}
+.sowhat span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+ color:var(--accent);font-weight:700;margin-bottom:7px}
+.sowhat b{font-weight:650}
+.fine{font-size:12.5px;line-height:1.75;color:var(--muted);margin-top:22px;max-width:70ch}
+.fine b{color:var(--ink-2);font-weight:600}
+.claim{font-size:17px;font-weight:600;color:var(--ink);border-left:2px solid var(--accent);
+ padding-left:16px;margin:20px 0;max-width:58ch}
+
+/* ── tables ─────────────────────────────────────────── */
+.tw{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:10px;
+ background:var(--panel);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+ color:var(--muted);background:var(--panel-2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--panel-2)}
+td b{color:var(--accent);font-weight:650}
+.note{font-size:12px;color:var(--muted);margin-top:-8px;max-width:76ch}
+
+/* ── charts ─────────────────────────────────────────── */
+.chart{width:100%;height:auto;margin:26px 0 6px;display:block}
+.chart .ax{font-size:11px;fill:var(--muted)}
+.chart .vl{font-size:11.5px;fill:var(--ink-2);font-variant-numeric:tabular-nums}
+.chart .vl.em{font-weight:700;fill:var(--ink)}
+.chart .lg{font-size:11px;fill:var(--muted);letter-spacing:.04em}
+.chart .lift{font-size:13px;fill:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* ── blocks ─────────────────────────────────────────── */
+.callout{background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:12px;
+ padding:18px 20px;margin:26px 0;max-width:68ch}
+.callout h3{margin:0;font-size:14.5px;color:var(--warn);font-weight:650}
+.callout p{font-size:14px;line-height:1.7;margin:9px 0 0;max-width:none}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+ padding:22px 24px;margin:26px 0;box-shadow:var(--shadow);max-width:68ch}
+.box h3{margin:0;font-size:16px}
+.box p{font-size:14.5px;margin:10px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:24px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 19px;
+ box-shadow:var(--shadow)}
+.card h3{margin:0 0 7px;font-size:14.5px;font-weight:650}
+.card p{font-size:13.5px;line-height:1.65;margin:0;color:var(--muted);max-width:none}
+.tag{display:inline-block;font-size:10.5px;padding:2px 8px;border-radius:999px;
+ border:1px solid currentColor;margin-left:7px;vertical-align:2px;font-weight:600;letter-spacing:.03em}
+.tag.rev{color:var(--warn)} .tag.weak{color:var(--muted)} .tag.ok{color:var(--accent)}
+ul{padding-left:20px;margin:14px 0;max-width:62ch}
+li{margin:8px 0}
+
+/* ── collapsible appendix items ─────────────────────── */
+details{border-top:1px solid var(--line);padding:15px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:14.5px;font-weight:550;color:var(--ink-2);list-style:none;
+ display:flex;gap:10px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";flex:none;width:16px;height:16px;border-radius:5px;
+ background:var(--accent-soft);border:1px solid var(--accent-line);
+ background-image:linear-gradient(var(--accent),var(--accent)),linear-gradient(var(--accent),var(--accent));
+ background-size:8px 1.5px,1.5px 8px;background-position:center,center;background-repeat:no-repeat}
+details[open] summary::before{background-size:8px 1.5px,0 0}
+summary:hover{color:var(--accent)}
+.det{padding-top:6px}
+
+footer{padding-block:40px;color:var(--muted);font-size:12.5px}
+footer p{max-width:76ch}
+@media(max-width:560px){
+ header.hero{padding-block:52px 28px}
+ section{padding-block:52px 44px}
+ section.appendix{padding:26px 18px;border-radius:12px}
+ th,td{padding:8px 10px;font-size:12px}
+ .sowhat,.box,.callout{border-radius:10px}
+}
+@media(prefers-reduced-motion:no-preference){a,summary,nav.toc a{transition:color .15s ease,background .15s ease}}

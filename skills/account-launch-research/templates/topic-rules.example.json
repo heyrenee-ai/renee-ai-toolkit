@@ -1,0 +1,11 @@
+{
+  "_说明": "一个选题一组关键词，大小写不敏感，支持正则。命中多条时按这里的先后顺序取第一条。先跑一遍看覆盖率，再让 agent 补没命中的。选题数量控制在 6–10 个，多了格子会空。",
+  "T1 AI 工具实操": ["chatgpt", "claude\\b", "\\bai tool", "prompt", "automat", "workflow", "n8n", "cursor"],
+  "T2 设计/视觉技法": ["design", "logo", "brand(ing)?", "color palette", "typograph", "figma", "canva"],
+  "T3 AI 视觉成片": ["midjourney", "veo\\b", "runway", "sora", "ai video", "ai film", "image to video"],
+  "T4 搞钱/变现": ["make money", "side hustle", "income", "\\$\\d", "freelanc", "client", "invoice", "passive"],
+  "T5 打工人日常": ["day in (my|the) life", "9-?5", "office", "commut", "wfh", "work from home", "routine"],
+  "T6 内容方法论": ["went viral", "algorithm", "followers", "engagement", "hook", "post(ing)? schedule", "grow(th)? on"],
+  "T7 求职/远程工作": ["resume", "cv\\b", "interview", "job search", "hiring", "remote job", "linkedin", "applicat"],
+  "T8 个人成长": ["mindset", "discipline", "habit", "burnout", "confidence", "therapy", "self ?care"]
+}

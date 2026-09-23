@@ -1,0 +1,303 @@
+{
+  "title": "Creator Benchmark Kit — snapshot demo",
+  "lang": "en",
+  "eyebrow": "Recomputable example · historical provider-supplied snapshot",
+  "subtitle": "These numbers describe the supplied input only. They do not establish current account performance, a niche trend, or a causal effect.",
+  "facts": [
+    [
+      "Accounts",
+      13
+    ],
+    [
+      "Window",
+      "Up to 36 posts"
+    ],
+    [
+      "Evidence",
+      "Unverified capture provenance"
+    ]
+  ],
+  "sections": [
+    {
+      "id": "limits",
+      "title": "Read the limits first",
+      "blocks": [
+        {
+          "type": "callout",
+          "h": "Source and scope",
+          "p": [
+            "The provider described the capture as 2026-09-22. Original screenshots are not included, so capture time, inferred format labels and completeness cannot be independently verified here.",
+            "Some entries have dates only, not post URLs; ID-derived dates are heuristic. K/M values are approximate. Leading pins are removed only where explicitly marked in the input.",
+            "Recent posts have had less time to accumulate views. Windows differ across accounts. Do not infer niche cooling, automation, originality or format causation from this example."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level",
+      "title": "Median views in the supplied windows",
+      "blocks": [
+        {
+          "type": "chart",
+          "kind": "bars",
+          "title": "Snapshot median views",
+          "rows": [
+            [
+              "taki.gpt",
+              [
+                4379.0
+              ]
+            ],
+            [
+              "ridergpt",
+              [
+                953.0
+              ]
+            ],
+            [
+              "ai.tools246",
+              [
+                848.5
+              ]
+            ],
+            [
+              "smart.easy",
+              [
+                11142.0
+              ]
+            ],
+            [
+              "lutho.tech",
+              [
+                19850.0
+              ]
+            ],
+            [
+              "future_product_2080",
+              [
+                319.0
+              ]
+            ],
+            [
+              "aitoolvaultly",
+              [
+                7577
+              ]
+            ],
+            [
+              "ninjaaitools",
+              [
+                1843
+              ]
+            ],
+            [
+              "webnovax",
+              [
+                8147.0
+              ]
+            ],
+            [
+              "aidaily.org",
+              [
+                567
+              ]
+            ],
+            [
+              "emdottech",
+              [
+                1046.0
+              ]
+            ],
+            [
+              "tech.nologe",
+              [
+                11300.0
+              ]
+            ],
+            [
+              "handlytech",
+              [
+                650.0
+              ]
+            ]
+          ],
+          "series": [
+            [
+              "Median views",
+              "--accent"
+            ]
+          ]
+        },
+        {
+          "type": "fine",
+          "html": "Values are recalculated, not copied from an earlier narrative. No group comparison is asserted."
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "title": "Calculated inputs for review",
+      "class": "appendix",
+      "blocks": [
+        {
+          "type": "table",
+          "head": [
+            "Profile",
+            "N",
+            "Segment N",
+            "Median",
+            "Recent",
+            "Oldest",
+            "Recent/oldest",
+            "Days"
+          ],
+          "rows": [
+            [
+              "<a href=\"https://www.tiktok.com/@taki.gpt\">taki.gpt</a>",
+              36,
+              "12/12/12",
+              "4,379",
+              "3,367",
+              "4,201.5",
+              "0.8",
+              38
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@ridergpt\">ridergpt</a>",
+              36,
+              "12/12/12",
+              "953",
+              "1,144",
+              "957.5",
+              "1.19",
+              184
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@ai.tools246\">ai.tools246</a>",
+              36,
+              "12/12/12",
+              "848.5",
+              "728",
+              "959.5",
+              "0.76",
+              10
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@smart.easy\">smart.easy</a>",
+              26,
+              "8/9/9",
+              "11,142",
+              "7,493",
+              "20,900",
+              "0.36",
+              424
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@lutho.tech\">lutho.tech</a>",
+              36,
+              "12/12/12",
+              "19,850",
+              "5,917",
+              "36,150",
+              "0.16",
+              116
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@future_product_2080\">future_product_2080</a>",
+              16,
+              "5/5/6",
+              "319",
+              "209",
+              "513.5",
+              "0.41",
+              14
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@aitoolvaultly\">aitoolvaultly</a>",
+              17,
+              "5/6/6",
+              "7,577",
+              "8,617",
+              "23,550",
+              "0.37",
+              16
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@ninjaaitools\">ninjaaitools</a>",
+              31,
+              "10/10/11",
+              "1,843",
+              "1,477",
+              "1,879",
+              "0.79",
+              36
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@webnovax\">webnovax</a>",
+              32,
+              "10/11/11",
+              "8,147",
+              "8,202.5",
+              "7,668",
+              "1.07",
+              47
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@aidaily.org\">aidaily.org</a>",
+              29,
+              "9/10/10",
+              "567",
+              "578",
+              "373.5",
+              "1.55",
+              199
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@emdottech\">emdottech</a>",
+              32,
+              "10/11/11",
+              "1,046",
+              "873.5",
+              "5,612",
+              "0.16",
+              80
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@tech.nologe\">tech.nologe</a>",
+              36,
+              "12/12/12",
+              "11,300",
+              "6,735",
+              "11,350",
+              "0.59",
+              200
+            ],
+            [
+              "<a href=\"https://www.tiktok.com/@handlytech\">handlytech</a>",
+              36,
+              "12/12/12",
+              "650",
+              "1,042",
+              "564",
+              "1.85",
+              53
+            ]
+          ]
+        },
+        {
+          "type": "details",
+          "summary": "Reproduce this example",
+          "blocks": [
+            {
+              "type": "p",
+              "html": "<code>python3 scripts/build_example.py /tmp/report.json</code> then <code>python3 scripts/render_report.py /tmp/report.json /tmp/demo.html --standalone</code>, from the installed skill directory."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    "Public metrics are supplied for computational demonstration; linked third-party content retains its own rights."
+  ]
+}
